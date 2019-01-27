@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import List from './AppList';
-import {currenciesList} from './bd/store.js';
+import {currenciesList} from './data';
 
 const currencies = currenciesList;
 
@@ -17,5 +17,13 @@ class App extends Component {
     );
   }
 }
+
+fetch('https://api.cryptonator.com/api/ticker/eth-usd')
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        console.log('-------------- data', data)
+    })
 
 export default App;

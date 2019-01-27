@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import ReactDOM from 'react-dom';
-import {currenciesList} from './bd/store.js';
-
-const currencies = currenciesList;
 
 function ListItem(props) {
   return <li>{props.value.value} <span>{props.value.iso}</span></li>;
