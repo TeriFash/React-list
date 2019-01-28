@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import './App.css';
+import React from 'react';
 
 function ListItem(props) {
   return <li>{props.value.value} <span>{props.value.iso}</span></li>;

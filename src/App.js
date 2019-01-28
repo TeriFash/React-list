@@ -18,12 +18,4 @@ class App extends Component {
   }
 }
 
-fetch('https://api.cryptonator.com/api/ticker/eth-usd')
-    .then(function (response) {
-        return response.json()
-    })
-    .then(function (data) {
-        console.log('-------------- data', data)
-    })
-
 export default App;

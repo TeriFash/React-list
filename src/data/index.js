@@ -16,4 +16,4 @@ const currenciesList = [
 },
 ];
 
-export {currenciesList};
+export {currenciesList };
