@@ -19,28 +19,26 @@ class GetCurrencies extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            users: []
+            currency: []
         }
-        console.log('---------', this.state);
-
 
     }
 
     componentDidMount() {
         fetch(this.props['data-url'])
             .then((response) => response.json())
-            .then((users) => this.setState({users: users}))
+            .then((currency) => this.setState({currency: currency}))
     }
 
     render() {
         return <div className="grid">
-            <h1>Test</h1>
+            <h1>{this.props.title}</h1>
             <table>
-                <tbody>{this.state.users.map((user) =>
-                    <tr key={user.id}>
-                        <td>{user.first_name} {user.last_name}</td>
-                        <td> {user.email}</td>
-                        <td> {user.ip_address}</td>
+                <tbody>{this.state.currency.map((item) =>
+                    <tr key={item.id}>
+                        <td>{item.first_name} {item.last_name}</td>
+                        <td> {item.email}</td>
+                        <td> {item.ip_address}</td>
                     </tr>)}
                 </tbody>
             </table>
