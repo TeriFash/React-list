@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import './App.css';
-import List from './AppList';
-import {currenciesList} from './data';
-
-const currencies = currenciesList;
 
 const dataUrl = 'https://raw.githubusercontent.com/azat-co/react-quickly/master/ch05/users/real-user-data.json'
 
@@ -12,10 +8,7 @@ class App extends Component {
     render() {
         return (
             <section className="App">
-                <div className="container">
-                    <List currencies={currencies}/>
-                </div>
-                <GetCurrencies data-url={dataUrl}/>
+                <GetCurrencies data-url={dataUrl} title={'Currencies - BTC to USD'}/>
             </section>
         );
     }
@@ -28,6 +21,9 @@ class GetCurrencies extends React.Component {
         this.state = {
             users: []
         }
+        console.log('---------', this.state);
+
+
     }
 
     componentDidMount() {
@@ -37,8 +33,8 @@ class GetCurrencies extends React.Component {
     }
 
     render() {
-        return <div>
-            <h1>List of Users</h1>
+        return <div className="grid">
+            <h1>Test</h1>
             <table>
                 <tbody>{this.state.users.map((user) =>
                     <tr key={user.id}>

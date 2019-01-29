@@ -49,3 +49,28 @@ section.App{
 .container ul li:hover span {
   color: #fff;
 }
+
+table {
+  border: 1px solid #282c34;
+  border-collapse: collapse;
+}
+table tr {
+  background: #fff;
+  transition: all .2s ease;
+}
+table tr:nth-child(odd) {
+  background: #efefef;
+  transition: all .2s ease;
+}
+table tr:hover {
+  background: rgba(92, 203, 234, .5);
+}
+table tr:hover td {
+  color: #fff;
+}
+table tr td {
+  transition: all .2s ease;
+  border: 1px solid #b7b7b7;
+  padding: 5px 15px;
+  color: #282c34;
+}
